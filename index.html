@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container">
+    <section class="intro">
+      <div class="intro__right">
+        <h1 class="intro__title">Simple booking</h1>
+        <p class="intro__text">Stay in touch with our dog walkers through the chat interface. This makes it easy to 
+          discuss arrangements and make bookings. Once the walk has been completed you can rate 
+          your walker and book again all through the chat.</p>
+      </div>
+      <figure class="interface">
+        <figcaption class="sr-only">An example of app chat interface</figcaption>
+        <div class="interface__content">
+          <div class="interface__header flex-space-between-center">
+            <div class="interface__header__left flex-space-between-center">
+              <div class="arrow">
+                <span class="arrow__line"></span>
+                <span class="arrow__line"></span>
+              </div>
+              <img class="inteface__header__photo" width="30" height="30" src="images/avatar.jpg" alt="Avatar">
+              <div>
+                <p class="interface__header__name">Samuel Green</p>
+                <p class="interface__header__status">Available to Walk</p>
+              </div>              
+            </div>
+            <div class="dots-menu">
+              <div class="dots-menu__dot"></div>
+              <div class="dots-menu__dot"></div>
+              <div class="dots-menu__dot"></div>
+            </div>
+          </div>
+          <div class="interface__messages">
+            <div class="message message--dogwalker">That sounds great. I’d be happy with that.</div> 
+            <div class="message message--dogwalker">Could you send over some pictures of your dog, please?</div>
+            <div class="message--pictures">
+              <img width="50" height="50" src="images/dog-image-1.jpg" alt="dog-image-1">
+              <img width="50" height="50" src="images/dog-image-2.jpg" alt="dog-image-2">
+              <img width="50" height="50" src="images/dog-image-3.jpg" alt="dog-image-3">
+            </div>
+            <div class="message message--client">Here are a few pictures. She’s a happy girl!</div>
+            <div class="message message--client">Can you make it?</div>   
+            <div class="message message--dogwalker">She looks so happy! The time we discussed works. How long shall I take her out for?</div>  
+            <div class="message message--price flex-space-between-center">
+              <span class="message--price__time">30 minutes walk</span>
+              <span class="message--price__price">$29</span>
+            </div>
+            <div class="message message--price flex-space-between-center">
+              <span class="message--price__time">1 hour walk</span>
+              <span class="message--price__price">$49</span>
+            </div>
+          </div>
+          <div class="message-input flex-space-between-center">
+              <div class="message-input__field">Type a message...</div>
+              <div class="message-input__button">
+                <div class="arrow--reverse">
+                  <span class="arrow--reverse__line"></span>
+                  <span class="arrow--reverse__line"></span>
+                </div>
+              </div>
+          </div>
+        </div>
+      </figure>
+    </section>
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by Sigma.
+    </div>
+  </div>
+  
+
+
+  
+
+  
+  
+ 
+</body>
+</html>

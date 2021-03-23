@@ -1,0 +1,357 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+    background-color: #fff;
+}
+
+p,
+figure {
+    margin: 0;
+}
+
+
+
+/* || CONTAINERS */
+
+.container {
+    width: 100%;
+    padding: 3% 5% 3% 20%;
+    position: relative;
+}
+
+
+.container::before {
+    position: absolute;
+    top: 0;
+    left: -10%;
+    content: "";
+    height: 700px;
+    width: 35%;
+    background: linear-gradient(200deg, #e942ff, 30%, #8838ff);
+    z-index: -1;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    animation-name: slidein;
+    animation-duration: 2s;
+}
+
+/* @keyframes slidein {
+    from {
+        top: -100%;
+    }
+
+    to {
+        top: 0;
+    }
+} */
+
+
+/* || UTILITIES */
+
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.flex-space-between-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+/* || INTRO */
+
+.intro {
+    display: flex;
+    align-items: center;
+    
+}
+
+.intro__right {
+    max-width: 45%;
+    margin-left: 10%;
+    order: 1;
+}
+
+.intro__title {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: hsl(271, 36%, 24%);
+}
+
+.intro__text {
+    line-height: 1.5;
+    color: hsl(270, 7%, 64%);
+}
+
+
+/* || PICTURE OF MOBILE PHONE WITH CHAT INTERFACE */
+
+@keyframes fadein {
+    
+    from {
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.interface {
+    display:inline-block;
+    background-color:#fff;
+    width: 300px;
+    border-radius: 20px;
+    font-size: 0.5rem;
+    position: relative;
+    box-shadow: 5px 20px 20px 0px rgb(0 0 0 / 20%);
+    animation-name: fadein;
+    animation-duration: 2s;
+   
+}
+
+.interface::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    width: 50%;
+    height: 35px;
+    background-color: #fff;
+    border-radius: 20px;
+
+}
+
+.interface__content {
+    margin: 15px;
+    background-color: hsl(270, 20%, 96%);
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+
+
+.interface__header {
+    flex-flow: row nowrap;
+    background: linear-gradient(to right, #8838ff,  #e942ff);
+    padding: 30px 20px 10px;
+    color: #fff;
+}
+
+.interface__header__left {
+    min-width: 130px;
+}
+
+/* || HEADER ARROW */
+
+.arrow__line {
+    display: block;
+    width: 7px;
+    height: 2px;
+    background-color: #fff;
+    transform-origin: left center;
+    transform: rotate(50deg);
+    border-radius: 5px;
+}
+
+.arrow__line:last-child {
+    transform: rotate(-50deg);
+}
+
+/* || HEADER DOTS */
+
+.dots-menu__dot {
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin: 2px 0;
+}
+
+
+.inteface__header__photo {
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.interface__header__name {
+    font-weight: 500;
+}
+
+.interface__header__status {
+    color: hsl(276, 100%, 81%);
+    font-size: 0.5rem;
+}
+
+.interface__messages {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.message {
+    width: 70%;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 5px 0;
+}
+
+.message--dogwalker {
+    align-self: flex-start;
+    border-bottom-left-radius: 5px;
+    color: hsl(276, 55%, 52%);
+    background-color: #eee;
+}
+
+
+.message--client {
+    align-self: flex-end;
+    background-color: #fff;
+    border-bottom-right-radius: 5px;
+    color: hsl(271, 15%, 43%);
+}
+
+.message--pictures {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.message--pictures img {
+    width: 50px;
+    height: 50px;
+    margin: 0 3px;
+    border-radius: 10px;
+}
+
+
+.message--price {
+    width: 80%;
+    align-self: flex-start;
+    background: linear-gradient(to right, #e942ff, #8838ff);
+    color: #fff;
+    border-bottom-left-radius: 5px;
+}
+
+.message--price__time::before {
+    content: "";
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    border: 2px solid hsl(289, 100%, 72%);
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: sub;
+}
+
+
+.message--price__price {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.message-input {
+    width: 90%;
+    background-color: #fff;
+    padding: 10px 10px 10px 20px;
+    margin: 0 auto 20px;
+    border-radius: 30px;
+    color: hsl(206, 6%, 79%);
+}
+
+.message-input__button {
+    width: 30px;
+    height: 30px;
+    background-color: hsl(271, 36%, 24%);
+    border-radius: 50%;
+    position: relative;
+}
+
+
+/* || SUBMIT ARROW */
+
+.arrow--reverse {
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    transform: translate(50%, -50%);
+}
+
+.arrow--reverse__line {
+    display: block;
+    width: 9px;
+    height: 2px;
+    background-color: #fff;
+    transform-origin: 7px center;
+    transform: rotate(45deg);
+    border-radius: 5px;
+}
+
+.arrow--reverse__line:last-child {
+    transform: rotate(-45deg);
+}
+
+
+
+/* || ATTRIBUTION */
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    margin: 20px 0 10px;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10% 5%;
+    }
+
+    .container::before {
+        width: 100%;
+        left: -50%;
+        top: -100px;
+    }
+    
+    .intro {
+        flex-direction: column;
+    }
+
+    .intro__right {
+        max-width: 100%;
+        margin:0;
+        text-align: center;
+    }
+
+}
